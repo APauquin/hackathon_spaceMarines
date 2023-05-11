@@ -1,3 +1,12 @@
+@import 'header.css';
+
 body {
     color: #f76c6c;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: Titillium web;
+}
+:root{
+    --main-color:black;
+    --main-color2: white;
 }
