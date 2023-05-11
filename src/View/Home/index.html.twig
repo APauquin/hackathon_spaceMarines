@@ -67,7 +67,7 @@ cameraPos: [-12000, 12000, -20000]
 				<div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="600">Regardez ce qui vous attends sur Mars!</div>
 				<div class="subtitle" data-swiper-parallax="-200" data-swiper-parallax-duration="600">Nos robots vous presentent les vues incroyables martiens a ne pas manquer!</div>
 				<div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
-					<div class="swiper innerSwiper">
+					{# <div class="swiper innerSwiper">
 						<div class="swiper-wrapper">
 							{% for photo in rover.photos %}
 								<div class="swiper-slide swiperslide2">
@@ -76,7 +76,7 @@ cameraPos: [-12000, 12000, -20000]
 							{% endfor %}
 						</div>
 						<div class="swiper-pagination"></div>
-					</div>
+					</div> #}
 				</div>
 			</div>
 
@@ -96,6 +96,9 @@ cameraPos: [-12000, 12000, -20000]
 		<div class="swiper-button-next swiper-button-white"></div>
 	</div>
 
+<footer>
+    <p>Police and privacy                  Terms and conditions</p>
+</footer>
 
 {% endblock %}
 
