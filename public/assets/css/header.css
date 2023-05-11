@@ -1,7 +1,13 @@
 .header-img {
     background-image: url(/assets/images/space_placeholder.jpg);
     width: 100%;
-    height: 30vh;
+    height: 30%;
     background-size: cover;
     background-position: center;
+    cursor: url(https://cur.cursors-4u.net/mechanics/mec-1/mec5.cur), auto !important;
 }
+
+
+
+
+

@@ -1,4 +1,4 @@
-const swiper = new Swiper('.swiperMain', {
+var swiper = new Swiper('.swiperMain', {
     parallax: true,
 
     loop: false,

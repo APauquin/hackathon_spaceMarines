@@ -1,34 +1,119 @@
-
-
-.swiper-slide {
-    font-size: 18px;
-    -webkit-box-sizing: border-box;
-    padding: 40px 60px;
+body {
+    overflow: hidden;
+    /* Hide scrollbars */
 }
 
-.parallax-bg {
+.swiper .swiperMain {
     position: absolute;
     left: 0;
-    top: 0;
+    top: 30%;
+    height: 70vh;
+}
+
+.swiper-slide .swiper-slide1 {
+    -webkit-box-sizing: border-box;
+}
+
+.swiper .parallax-bg {
+    position: absolute;
+    left: 0;
+    top:0;
     width: 130%;
-    height: 100%;
+    height: 70%;
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
-    background-image: url(/images/space_placeholder.jpg);
+    background-image: url(/assets/images/pexels-kai-pilger-1341279.jpg);
 }
+
 
 .swiper-slide .title {
     font-size: 41px;
     font-weight: 300;
+    width: fit-content;
+    background-color: rgba(9, 9, 9, 0.6);
+    border-radius: 10px;
+    padding: 0 5px;
+    margin-left: 10.5%;
 }
 
 .swiper-slide .subtitle {
     font-size: 21px;
+    width: fit-content;
+    background-color: rgba(9, 9, 9, 0.6);
+    border-radius: 0 0 5px 5px;
+    padding: 0 5px;
+    margin-left: 11%;
 }
 
 .swiper-slide .text {
     font-size: 14px;
-    max-width: 400px;
-    line-height: 1.3;
+    width: 60%;
+    height: 75%;
+    margin: 2% 20%;
+    background-color: grey;
+}
+
+/*Formulaire reservation*/
+
+.search-form form {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.form-group {
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    margin: 10px;
+}
+
+.form-group input, select, option {
+    border: none;
+    padding: 5px;
+    background-color: rgba(229, 229, 229, 0.732);
+    border-radius: 10px;
+}
+
+.form-group label {
+    margin: 5px;
+    padding: 10px;
+}
+
+.button-submit {
+    text-align: center;
+}
+
+.button-submit input[type="submit"] {
+    background-color: #14005ebe;
+    border: none;
+    border-radius: 10px;
+    color: white;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+  .button-submit input[type="submit"]:hover {
+    background-color: whitesmoke;
+    border: none;
+    border-radius: 10px;
+    color: #003d79;
+    padding: 10px 20px;
+    font-size: 25px;
+    cursor: pointer;
+  }
+
+.innerSwiper {
+    width: 100%;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.swiper-slide2  img {
+    width: 25%;
+    height: 40%;
 }

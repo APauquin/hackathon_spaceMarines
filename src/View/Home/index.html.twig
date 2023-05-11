@@ -6,35 +6,87 @@
 {% block content %}
 
 	<!-- Slider main container -->
-	<div class="swiperMain">
-		<div class="parallax-bg"  data-swiper-parallax="-23%"></div>
+	<div class="swiper swiperMain">
+		<div class="parallax-bg" data-swiper-parallax="-23%"></div>
 		<!-- Additional required wrapper -->
 		<div class="swiper-wrapper">
 
+			<div class="swiper-slide swiper-slide1">
+				<div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="600">Decouvrez la galaxie!</div>
+				<div class="subtitle" data-swiper-parallax="-200" data-swiper-parallax-duration="600">Choisissez votre déstination sur notre carte de l'univers</div>
+
+				{# galaxy API #}
+				<div id="edmap" class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600"></div>
+				{# <div id="debug"></div> #}
+				<div id="loader">
+					<svg width="100" height="100" viewbox="0 0 40 40"><path d="m5,8l5,8l5,-8z" class="l1 d1"/><path d="m5,8l5,-8l5,8z" class="l1 d2"/><path d="m10,0l5,8l5,-8z" class="l1 d3"/><path d="m15,8l5,-8l5,8z" class="l1 d4"/><path d="m20,0l5,8l5,-8z" class="l1 d5"/><path d="m25,8l5,-8l5,8z" class="l1 d6"/><path d="m25,8l5,8l5,-8z" class="l1 d7"/><path d="m30,16l5,-8l5,8z" class="l1 d8"/><path d="m30,16l5,8l5,-8z" class="l1 d9"/><path d="m25,24l5,-8l5,8z" class="l1 d10"/><path d="m25,24l5,8l5,-8z" class="l1 d11"/><path d="m20,32l5,-8l5,8z" class="l1 d13"/><path d="m15,24l5,8l5,-8z" class="l1 d14"/><path d="m10,32l5,-8l5,8z" class="l1 d15"/><path d="m5,24l5,8l5,-8z" class="l1 d16"/><path d="m5,24l5,-8l5,8z" class="l1 d17"/><path d="m0,16l5,8l5,-8z" class="l1 d18"/><path d="m0,16l5,-8l5,8z" class="l1 d19"/><path d="m10,16l5,-8l5,8z" class="l2 d0"/><path d="m15,8l5,8l5,-8z" class="l2 d3"/><path d="m20,16l5,-8l5,8z" class="l2 d6"/><path d="m20,16l5,8l5,-8z" class="l2 d9"/><path d="m15,24l5,-8l5,8z" class="l2 d12"/><path d="m10,16l5,8l5,-8z" class="l2 d15"/></svg>
+				</div>
+
+				<!-- jQuery -->
+				<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+				<!-- Three.js -->
+				<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r75/three.min.js"></script>
+
+				<!-- Launch ED3Dmap -->
+				<link href="assets/ED3D-Galaxy-Map/css/styles.css" rel="stylesheet" type="text/css"/>
+				<script src="assets/ED3D-Galaxy-Map/js/ed3dmap.min.js"></script>
+				<script type="text/javascript">
+
+					var d = new Date()
+d.setDate(d.getDate() - 1);
+var queryDate = d.getFullYear() + '-' + (
+d.getMonth() + 1
+) + '-' + d.getDate() + ' ' + d.getHours() + ':00:00';
+
+Ed3d.init({
+container: 'edmap',
+basePath: '/assets/ED3D-Galaxy-Map/',
+// jsonPath    : "https://www.edsm.net/api-v1/systems?coords=1&known=1&startdatetime="+queryDate,
+jsonPath: "https://www.edsm.net/api-v1/systems?coords=1&known=1&startdatetime=",
+withFullscreenToggle: true,
+popupDetail: true,
+withHudPanel: true,
+showGalaxyInfos: false,
+hudMultipleSelect: false,
+effectScaleSystem: [
+5, 3000
+],
+startAnim: true,
+showGalaxyInfos: true,
+systemColor: '#22AA22',
+playerPos: [
+0, 0, 0
+],
+cameraPos: [-12000, 12000, -20000]
+
+});
+				</script>
+			</div>
+
 			<div class="swiper-slide">
-				<div class="title" data-swiper-parallax="-100">Slide 1</div>
-				<div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+				<div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="600">Regardez ce qui vous attends sur Mars!</div>
+				<div class="subtitle" data-swiper-parallax="-200" data-swiper-parallax-duration="600">Nos robots vous presentent les vues incroyables martiens a ne pas manquer!</div>
 				<div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
-					<p>Lorem ipsum dolor sit amet, ...</p>
+					<div class="swiper innerSwiper">
+						<div class="swiper-wrapper">
+							{% for photo in rover.photos %}
+								<div class="swiper-slide swiperslide2">
+                                <img src="{{ photo.img_src }}">
+                                </div>
+							{% endfor %}
+						</div>
+						<div class="swiper-pagination"></div>
+					</div>
 				</div>
 			</div>
 
 			<div class="swiper-slide">
-				<div class="title" data-swiper-parallax="-100">Slide 1</div>
-				<div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
+				<div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="600">Slide 1</div>
+				<div class="subtitle" data-swiper-parallax="-200" data-swiper-parallax-duration="600">Subtitle</div>
 				<div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
 					<p>Lorem ipsum dolor sit amet, ...</p>
 				</div>
 			</div>
-
-			<div class="swiper-slide">
-				<div class="title" data-swiper-parallax="-100">Slide 1</div>
-				<div class="subtitle" data-swiper-parallax="-200">Subtitle</div>
-				<div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
-					<p>Lorem ipsum dolor sit amet, ...</p>
-				</div>
-			</div>
-
 		</div>
 
 		<!-- Add Scrollbar -->
@@ -50,4 +102,5 @@
 {% block javascript %}
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="/assets/js/swiperParallax.js"></script>
+
 {% endblock %}
