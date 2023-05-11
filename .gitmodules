@@ -1,0 +1,3 @@
+[submodule "public/assets/ED3D-Galaxy-Map"]
+	path = public/assets/ED3D-Galaxy-Map
+	url = git@github.com:gbiobob/ED3D-Galaxy-Map.git
