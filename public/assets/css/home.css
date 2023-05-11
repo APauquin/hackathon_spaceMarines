@@ -5,18 +5,17 @@ body {
 
 .swiper {
     width: 100%;
-    height: 80vh !important;
-
+    height: 79vh !important;
 }
 
 .swiper-slide .swiper-slide1 {
-    -webkit-box-sizing: border-box;
+    --webkit-box-sizing: border-box;
 }
 
 .swiper .parallax-bg {
     position: absolute;
     left: 0;
-    top:0;
+    top: 0;
     width: 130%;
     height: 100%;
     -webkit-background-size: cover;
@@ -24,7 +23,6 @@ body {
     background-position: center;
     background-image: url(/assets/images/pexels-kai-pilger-1341279.jpg);
 }
-
 
 .swiper-slide .title {
     font-size: 41px;
@@ -34,6 +32,7 @@ body {
     border-radius: 10px;
     padding: 0 5px;
     margin-left: 10.5%;
+    margin-top: 1vh;
 }
 
 .swiper-slide .subtitle {
@@ -51,6 +50,13 @@ body {
     height: 75%;
     margin: 2% 20%;
     background-color: grey;
+}
+
+/* inner swiper */
+
+
+.swiper-slide .swiper-slide2 {
+    height: 50%;
 }
 
 /*Formulaire reservation*/
@@ -93,9 +99,9 @@ body {
     padding: 10px 20px;
     font-size: 25px;
     cursor: pointer;
-  }
+}
 
-  .button-submit input[type="submit"]:hover {
+.button-submit input[type="submit"]:hover {
     background-color: whitesmoke;
     border: none;
     border-radius: 10px;
@@ -103,16 +109,4 @@ body {
     padding: 10px 20px;
     font-size: 25px;
     cursor: pointer;
-  }
-
-.innerSwiper {
-    width: 100%;
-    height: 40%;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.swiper-slide2  img {
-    width: 25%;
-    height: 40%;
 }

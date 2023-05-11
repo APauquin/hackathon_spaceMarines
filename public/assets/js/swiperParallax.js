@@ -20,6 +20,6 @@ var swiper = new Swiper('.swiperMain', {
     scrollbar: {
         el: '.swiper-scrollbar',
         draggable: true,
-
+        snapOnRelease: true,
       },
   });

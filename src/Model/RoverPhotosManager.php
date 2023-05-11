@@ -9,7 +9,7 @@ class RoverPhotosManager
     public function getAll()
     {
         $client = HttpClient::create();
-        $response = $client->request('GET', 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/photos?sol=1000&api_key=aaw0O1BzH8D2RyndzzS5BnBJr210NetO19gzLkMt');
+        $response = $client->request('GET', 'https://api.nasa.gov/mars-photos/api/v1/rovers/curiosity/latest_photos?api_key=aaw0O1BzH8D2RyndzzS5BnBJr210NetO19gzLkMt');
         return $response->toArray();
     }
 }

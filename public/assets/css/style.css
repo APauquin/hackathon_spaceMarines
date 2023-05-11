@@ -6,7 +6,10 @@ body {
     box-sizing: border-box;
     font-family: Titillium web;
 }
-:root{
-    --main-color:black;
+
+:root {
+    --main-color: black;
     --main-color2: white;
+    --swiper-scrollbar-bg-color: rgb(252, 109, 109, 0.1);
+    --swiper-scrollbar-drag-bg-color: rgb(252, 109, 109, 0.5);
 }

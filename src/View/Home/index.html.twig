@@ -67,16 +67,16 @@ cameraPos: [-12000, 12000, -20000]
 				<div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="600">Regardez ce qui vous attends sur Mars!</div>
 				<div class="subtitle" data-swiper-parallax="-200" data-swiper-parallax-duration="600">Nos robots vous presentent les vues incroyables martiens a ne pas manquer!</div>
 				<div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
-					{# <div class="swiper innerSwiper">
-						<div class="swiper-wrapper">
-							{% for photo in rover.photos %}
-								<div class="swiper-slide swiperslide2">
-                                <img src="{{ photo.img_src }}">
+					<div class="swiper innerSwiper">
+						<div class="swiper-wrapper innerwrapper">
+							{% for photo in rover.latest_photos %}
+								<div class="swiper-slide swiper-slide2">slides
+                                {# <img src="{{ photo.img_src }}"> #}
                                 </div>
 							{% endfor %}
 						</div>
 						<div class="swiper-pagination"></div>
-					</div> #}
+					</div>
 				</div>
 			</div>
 
@@ -105,5 +105,5 @@ cameraPos: [-12000, 12000, -20000]
 {% block javascript %}
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="/assets/js/swiperParallax.js"></script>
-
+    <script src="/assets/js/innerSwiper.js"></script>
 {% endblock %}
