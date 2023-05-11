@@ -1,11 +1,12 @@
 body {
     overflow: hidden;
+    max-height: 100vh;
     /* Hide scrollbars */
 }
 
 .swiper {
     width: 100%;
-    height: 79vh !important;
+    height: 80vh !important;
 }
 
 .swiper-slide .swiper-slide1 {
@@ -47,7 +48,7 @@ body {
 .swiper-slide .text {
     font-size: 14px;
     width: 60%;
-    height: 75%;
+    height: 60vh;
     margin: 2% 20%;
     background-color: none;
 }
@@ -125,4 +126,9 @@ body {
     padding: 10px 20px;
     font-size: 25px;
     cursor: pointer;
+}
+
+footer {
+
+    background-color: green;
 }
