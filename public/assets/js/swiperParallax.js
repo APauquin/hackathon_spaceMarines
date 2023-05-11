@@ -1,6 +1,6 @@
-var swiper = new Swiper('.swiperMain', {
+var swiperH = new Swiper('.swiperMain', {
     parallax: true,
-
+    simulateTouch:false,
     loop: false,
 
     navigation: {

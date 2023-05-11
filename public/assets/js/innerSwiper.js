@@ -1,12 +1,17 @@
-var swiper = new Swiper('.innerSwiper', {
+var swiperv = new Swiper('.swiper-container-v', {
     slidesPerView: 3,
     grid: {
-      rows: 2,
-    },
+        rows: 2,
+      },
+      pagination: {
+        el: ".swiper-pagination-v",
+        clickable: true,
+      },
+    direction: 'horizontal',
+    nested: true,
     spaceBetween: 30,
-    pagination: {
-      el: ".swiper-pagination",
-      clickable: true,
-    },
+    autoplay: {
+        delay: 1500,
+      },
   });
 

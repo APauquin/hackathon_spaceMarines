@@ -31,13 +31,6 @@
 				<link href="assets/ED3D-Galaxy-Map/css/styles.css" rel="stylesheet" type="text/css"/>
 				<script src="assets/ED3D-Galaxy-Map/js/ed3dmap.min.js"></script>
 				<script type="text/javascript">
-
-					var d = new Date()
-d.setDate(d.getDate() - 1);
-var queryDate = d.getFullYear() + '-' + (
-d.getMonth() + 1
-) + '-' + d.getDate() + ' ' + d.getHours() + ':00:00';
-
 Ed3d.init({
 container: 'edmap',
 basePath: '/assets/ED3D-Galaxy-Map/',
@@ -45,7 +38,6 @@ basePath: '/assets/ED3D-Galaxy-Map/',
 jsonPath: "https://www.edsm.net/api-v1/systems?coords=1&known=1&startdatetime=",
 withFullscreenToggle: true,
 popupDetail: true,
-withHudPanel: true,
 showGalaxyInfos: false,
 hudMultipleSelect: false,
 effectScaleSystem: [
@@ -58,7 +50,6 @@ playerPos: [
 0, 0, 0
 ],
 cameraPos: [-12000, 12000, -20000]
-
 });
 				</script>
 			</div>
@@ -67,24 +58,27 @@ cameraPos: [-12000, 12000, -20000]
 				<div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="600">Regardez ce qui vous attends sur Mars!</div>
 				<div class="subtitle" data-swiper-parallax="-200" data-swiper-parallax-duration="600">Nos robots vous presentent les vues incroyables martiens a ne pas manquer!</div>
 				<div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
-					<div class="swiper innerSwiper">
-						<div class="swiper-wrapper innerwrapper">
-							{% for photo in rover.latest_photos %}
-								<div class="swiper-slide swiper-slide2">slides
-                                {# <img src="{{ photo.img_src }}"> #}
-                                </div>
+					<div class="swiper-container swiper-container-v">
+						<div class="swiper-wrapper">
+							{% for photo in rover.photos %}
+								<div class="swiper-slide swiper-slide2" style="background-image: url('{{ photo.img_src }}')"></div>
 							{% endfor %}
 						</div>
-						<div class="swiper-pagination"></div>
+						<div class="swiper-pagination swiper-pagination-v"></div>
+						<div class="swiper-button-prevv swiper-button-white"></div>
+						<div class="swiper-button-nextv swiper-button-white"></div>
 					</div>
 				</div>
 			</div>
 
 			<div class="swiper-slide">
-				<div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="600">Slide 1</div>
-				<div class="subtitle" data-swiper-parallax="-200" data-swiper-parallax-duration="600">Subtitle</div>
-				<div class="text" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
-					<p>Lorem ipsum dolor sit amet, ...</p>
+				<div class="title" data-swiper-parallax="-100" data-swiper-parallax-duration="600">Quelques conseils...</div>
+				<div class="subtitle" data-swiper-parallax="-200" data-swiper-parallax-duration="600">Nos experts vous proposent leurs meilleures solutions pour explorer les profondeurs de l'espace!</div>
+				<div class="text text-background" data-swiper-parallax="-300" data-swiper-parallax-duration="600">
+					<p>L'exploration de l'espace est l'un des plus grands défis de l'humanité. Depuis des décennies, nous avons cherché à comprendre l'univers qui nous entoure, à découvrir de nouvelles planètes et à en apprendre davantage sur les origines de la vie. Mais pour explorer les profondeurs de l'espace, nous devons trouver les meilleures solutions pour surmonter les défis techniques et financiers qui se dressent devant nous.</p>
+<p>L'une des solutions les plus prometteuses pour explorer les profondeurs de l'espace est la propulsion électrique. Les moteurs électriques sont plus efficaces que les moteurs à combustion, ce qui signifie qu'ils peuvent parcourir de plus longues distances avec moins de carburant. Ils sont également plus fiables et ont une durée de vie plus longue, ce qui est crucial pour les missions d'exploration spatiale.</p>
+<p>Enfin, la coopération internationale est une autre solution importante pour explorer les profondeurs de l'espace. Les pays peuvent travailler ensemble pour partager des ressources et des connaissances, ce qui peut réduire les coûts et augmenter l'efficacité des missions spatiales. La coopération internationale peut également favoriser la paix et la compréhension entre les nations.</p>
+<p>En résumé, pour explorer les profondeurs de l'espace, nous avons besoin de solutions innovantes et de coopération internationale. La propulsion électrique, l'utilisation de robots et la coopération internationale sont toutes des solutions qui peuvent nous aider à relever les défis de l'exploration spatiale et à découvrir de nouveaux horizons dans l'univers.</p>
 				</div>
 			</div>
 		</div>
@@ -96,14 +90,14 @@ cameraPos: [-12000, 12000, -20000]
 		<div class="swiper-button-next swiper-button-white"></div>
 	</div>
 
-<footer>
-    <p>Police and privacy                  Terms and conditions</p>
-</footer>
+	<footer>
+		<p>Terms and conditions</p>
+	</footer>
 
 {% endblock %}
 
 {% block javascript %}
 	<script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
 	<script src="/assets/js/swiperParallax.js"></script>
-    <script src="/assets/js/innerSwiper.js"></script>
+	<script src="/assets/js/innerSwiper.js"></script>
 {% endblock %}
