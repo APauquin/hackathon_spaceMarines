@@ -1,10 +1,16 @@
-#HACKATHON SPACEMARINES:
+# HACKATHON SPACEMARINES:
 
 ## A faire avant le demarrage
-composer install
-composer require symfony/http-client
-git submodule add git@github.com:gbiobob/ED3D-Galaxy-Map.git public/assets/ED3D-Galaxy-Map
 
+1.composer install.
+
+2.composer require symfony/http-client.
+
+3.git submodule add git@github.com:gbiobob/ED3D-Galaxy-Map.git public/assets/ED3D-Galaxy-Map.
+
+4.git submodule init.
+
+5.git submodule update.
 
 # Simple MVC
 
