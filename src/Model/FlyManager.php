@@ -10,12 +10,14 @@ class FlyManager extends AbstractManager
 
     public function insert(array $fly): int
     {
-        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`provenance`,`arrivee`,`depart`,`retour`)
-         VALUES (:provenance, :arrivee, :depart, :retour)");
-        $statement->bindValue('name', $fly['provenance'], \PDO::PARAM_STR);
-        $statement->bindValue('email', $fly['arrivee'], \PDO::PARAM_STR);
-        $statement->bindValue('message', $fly['depart'], \PDO::PARAM_STR);
-        $statement->bindValue('message', $fly['retour'], \PDO::PARAM_STR);
+        $prix = rand(1000000, 10000000);
+        $statement = $this->pdo->prepare("INSERT INTO " . self::TABLE . " (`provenance`,`arrivee`,`depart`,`retour`,`prix`)
+         VALUES (:provenance, :arrivee, :depart, :retour, :prix)");
+        $statement->bindValue('provenance', $fly['provenance'], \PDO::PARAM_STR);
+        $statement->bindValue('arrivee', $fly['arrivee'], \PDO::PARAM_STR);
+        $statement->bindValue('depart', $fly['depart'], \PDO::PARAM_STR);
+        $statement->bindValue('retour', $fly['retour'], \PDO::PARAM_STR);
+        $statement->bindValue('prix', $prix, \PDO::PARAM_INT);
 
 
         $statement->execute();

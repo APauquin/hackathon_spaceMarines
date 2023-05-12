@@ -1,0 +1,91 @@
+
+.fixed_headers {
+    width: 1200px;
+    border-collapse: collapse;
+    table-layout: fixed;
+    margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/assets/images/galaxie-naine.png);
+  }
+
+  .fixed_headers th {
+    text-decoration: underline;
+  }
+
+  .fixed_headers th,
+  .fixed_headers td {
+    padding: 5px;
+    text-align: left;
+  }
+
+  .fixed_headers td:nth-child(1),
+  .fixed_headers th:nth-child(1) {
+    min-width: 200px;
+  }
+
+  .fixed_headers td:nth-child(2),
+  .fixed_headers th:nth-child(2) {
+    min-width: 200px;
+  }
+
+  .fixed_headers td:nth-child(3),
+  .fixed_headers th:nth-child(3) {
+    width: 200px;
+  }
+  .fixed_headers td:nth-child(4),
+  .fixed_headers th:nth-child(4) {
+    width: 200px;
+  }
+  .fixed_headers td:nth-child(5),
+  .fixed_headers th:nth-child(5) {
+    width: 200px;
+  }
+  .fixed_headers td:nth-child(6),
+  .fixed_headers th:nth-child(6) {
+    width: 200px;
+  }
+
+  .fixed_headers thead {
+    background-color: #c7a975 ;
+    color: #eee6e6 ;
+  }
+
+  .fixed_headers thead tr {
+    display: block;
+    position: relative;
+  }
+
+  .fixed_headers tbody {
+    display: block;
+    overflow: auto;
+    width: 100%;
+    height: 50%;
+  }
+
+  .fixed_headers tbody tr:nth-child(even) {
+    background-color: black;
+  }
+
+  .fixed_headers tbody tr:nth-child(odd) {
+    background-color: black;
+  }
+
+  .find-flight{
+    display:inline-block;
+    width: 100%;
+    height: 100%;
+    background-color: #c7a975;
+}
+
+label.select {
+    color: black;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    min-width: 100vh;
+    right: 0;
+    left: 0;
+}

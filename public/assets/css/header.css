@@ -196,15 +196,16 @@ h1 {
 }
 
 ul.errors {
-    text-align: center;
+    text-align: right;
     list-style-type: none;
-    color: yellow;
+    color: #c7a975;
     font-size: large;
+    position: absolute;
+    top: 0.5%;
+    right: 0.5%;
 }
 
-ul.errors {
-    text-align: center;
-    list-style-type: none;
-    color: yellow;
-    font-size: large;
+a.spacehub {
+    text-decoration: none;
+    color: #c7a975;
 }
