@@ -13,3 +13,5 @@
 5.git submodule update.
 
 # PS: Pour modifier le fonctionnement du submodule ED3D (la galaxie), voir dans le fichier: /public/assets/js/ed3dmap.min.js.
+
+### Grand merci a gbiobob https://github.com/gbiobob/ED3D-Galaxy-Map#readme
