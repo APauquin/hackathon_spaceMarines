@@ -1,0 +1,19 @@
+body {
+    color: #eee6e6;
+    box-sizing: border-box;
+    margin: 0%;
+    font-family: Titillium web;
+}
+
+:root {
+    --main-color: black;
+    --main-color2: white;
+    --swiper-scrollbar-drag-bg-color: rgba(232, 226, 226, 0.833);
+    --swiper-navigation-color: #e1d8d8;
+    --swiper-pagination-bullet-inactive-color: #000;
+    --swiper-pagination-bullet-inactive-opacity: 0.5;
+    --swiper-pagination-color: #e1d8d8;
+    --swiper-pagination-bullet-size: 12px;
+    --swiper-pagination-bullet-width: 12px;
+    --swiper-pagination-bullet-height: 12px;
+}
