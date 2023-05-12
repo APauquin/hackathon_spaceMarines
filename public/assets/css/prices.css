@@ -1,8 +1,12 @@
+
 .fixed_headers {
     width: 1200px;
     border-collapse: collapse;
     table-layout: fixed;
     margin: auto;
+    background-size: cover;
+    background-position: center;
+    background-image: url(/assets/images/galaxie-naine.png);
   }
 
   .fixed_headers th {
@@ -76,4 +80,12 @@
 
 label.select {
     color: black;
+}
+
+footer {
+    position: absolute;
+    bottom: 0;
+    min-width: 100vh;
+    right: 0;
+    left: 0;
 }

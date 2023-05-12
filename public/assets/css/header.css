@@ -204,3 +204,8 @@ ul.errors {
     top: 0.5%;
     right: 0.5%;
 }
+
+a.spacehub {
+    text-decoration: none;
+    color: #c7a975;
+}
