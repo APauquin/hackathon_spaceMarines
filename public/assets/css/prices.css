@@ -78,7 +78,8 @@
     background-color: #c7a975;
 }
 
-label.select {
+.selectLink {
+    text-decoration: none;
     color: black;
 }
 
@@ -88,4 +89,16 @@ footer {
     min-width: 100vh;
     right: 0;
     left: 0;
+}
+section.containerPurchase {
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
+    padding: 10% 20%;
+}
+p.main-content__body {
+    color: black;
+    font-size: 25px;
 }
