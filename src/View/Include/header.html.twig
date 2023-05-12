@@ -1,7 +1,22 @@
 <div class="header-img">
-<h1> SPACEHUB </h1>
-<div class="search-form">
-                <!-- Formulaire de recherche -->
+	<h1>
+		SPACEHUB
+	</h1>
+	<div class="search-form">
+
+        <div class="container-star">
+            <div class="top"></div>
+            <div class="top2"></div>
+            <div class="top3"></div>
+            <div class="top4"></div>
+            <div class="top5"></div>
+            <div class="top6"></div>
+            <div class="top7"></div>
+            <div class="top8"></div>
+            <div class="top9"></div>
+        </div>
+
+		<!-- Formulaire de recherche -->
                 <form method="post">
 
                     <ul class="errors">
@@ -10,55 +25,54 @@
 							{% endfor %}
 						</ul>
 
-                    <div class="form-group">
-                        <label for="provenance">Planète de départ</label>
-                        <input type="text" name="provenance" id="provenance" placeholder="Terre, Lune, ...">
+      <div class="form-group">
+        <label for="provenance">Planète de départ</label>
+        <input type="text" name="provenance" id="provenance" placeholder="Terre, Lune, ...">
 
-                        <label for="arrivee">Planête d'arrivée</label>
-                        <input type="text" name="arrivee" id="arrivee" placeholder="Mars, Jupiter, ...">
-                    </div>
+        <label for="arrivee">Planête d'arrivée</label>
+        <input type="text" name="arrivee" id="arrivee" placeholder="Mars, Jupiter, ...">
+      </div>
 
-                    <div class="form-group">
-                        <label for="depart">Date de départ</label>
-                        <input type="date" name="depart" id="depart" value="13/04/2020">
+      <div class="form-group">
+        <label for="depart">Date de départ</label>
+        <input type="date" name="depart" id="depart" value="13/04/2020">
 
-                        <label for="retour">Date de Retour</label>
-                        <input type="date" name="retour" id="retour" value="14/04/2020">
-                    </div>
+				<label for="retour">Date de Retour</label>
+				<input type="date" name="retour" id="retour" value="14/04/2020">
+			</div>
 
-                    <div class="form-group">
-                        <label for="adultes">Nombre d'adultes</label>
-                        <select name="adultes" id="adultes">
-                            <option selected="selected">0 Adulte</option>
-                            <option>1 Adulte</option>
-                            <option>2 Adultes</option>
-                            <option>3 Adultes</option>
-                            <option>4 Adultes</option>
-                            <option>5 Adultes</option>
-                        </select>
+			<div class="form-group">
+				<label for="adultes">Nombre d'adultes</label>
+				<select name="adultes" id="adultes">
+					<option selected="selected">0 Adulte</option>
+					<option>1 Adulte</option>
+					<option>2 Adultes</option>
+					<option>3 Adultes</option>
+					<option>4 Adultes</option>
+					<option>5 Adultes</option>
+				</select>
 
-                        <label for="enfants">Nombre d'enfants</label>
-                        <select name="enfants" id="enfants">
-                            <option selected="selected">0 Enfant</option>
-                            <option>1 Enfant</option>
-                            <option>2 Enfants</option>
-                            <option>3 Enfants</option>
-                            <option>4 Enfants</option>
-                            <option>5 Enfants</option>
-                        </select>
+				<label for="enfants">Nombre d'enfants</label>
+				<select name="enfants" id="enfants">
+					<option selected="selected">0 Enfant</option>
+					<option>1 Enfant</option>
+					<option>2 Enfants</option>
+					<option>3 Enfants</option>
+					<option>4 Enfants</option>
+					<option>5 Enfants</option>
+				</select>
 
-                        <label for="type">Categorie</label>
-                        <select name="type" id="type">
-                            <option selected="selected">Classe Economique</option>
-                            <option>Classe Affaires</option>
-                        </select>
-                    </div>
+				<label for="type">Categorie</label>
+				<select name="type" id="type">
+					<option selected="selected">Classe Economique</option>
+					<option>Classe Affaires</option>
+				</select>
+			</div>
 
                     <div class="button-submit">
                         <input type="submit" value="Lancer la recherche" name="recherche" id="recherche" href="/prices">
                     </div>
 
-                </form>
-            </div>
+		</form>
+	</div>
 </div>
-

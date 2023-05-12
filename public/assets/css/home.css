@@ -2,6 +2,7 @@ body {
     overflow: hidden;
     max-height: 100vh;
     /* Hide scrollbars */
+    cursor: url(https://cur.cursors-4u.net/mechanics/mec-1/mec5.cur), auto !important;
 }
 
 .swiper {
@@ -22,7 +23,7 @@ body {
     -webkit-background-size: cover;
     background-size: cover;
     background-position: center;
-    background-image: url(/assets/images/pexels-kai-pilger-1341279.jpg);
+    background-image: url(/assets/images/galaxie-naine.png);
 }
 
 .swiper-slide .title {
@@ -82,13 +83,13 @@ body {
 
 .search-form form {
     display: flex;
-    justify-content: center;
+    align-items: center;
     flex-wrap: wrap;
-    max-height: 20vh;
+
 }
 
 .form-group {
-    color: #ffffff;
+    color: #eee6e6;
     display: flex;
     justify-content: center;
     flex-direction: row;
@@ -96,10 +97,12 @@ body {
 }
 
 .form-group input, select, option {
+    color: #1a1919;
     border: none;
     padding: 5px;
-    background-color: rgba(229, 229, 229, 0.732);
-    border-radius: 10px;
+    background-color:  #eee6e6;
+    border-radius: 5px;
+    z-index: 10000;
 }
 
 .form-group label {
@@ -112,26 +115,31 @@ body {
 }
 
 .button-submit input[type="submit"] {
-    background-color: #14005ebe;
+    background-color: #eee6e6;
     border: none;
-    border-radius: 10px;
-    color: white;
+    border-radius: 5px;
+    color: #ccad77;
     padding: 10px 20px;
     font-size: 25px;
     cursor: pointer;
+    position: relative;
+    z-index: 10000;
 }
 
 .button-submit input[type="submit"]:hover {
-    background-color: whitesmoke;
+    background-color: #ccad77;
     border: none;
-    border-radius: 10px;
-    color: #003d79;
+    border-radius: 5px;
+    color: #eee6e6;
     padding: 10px 20px;
     font-size: 25px;
     cursor: pointer;
+    position: relative;
+    z-index: 10000;
 }
 
 footer {
-
-    background-color: green;
+    display: flex;
+    justify-content: center;
+    background-color: #1a1919;
 }
