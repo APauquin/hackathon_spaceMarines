@@ -12,4 +12,4 @@
 
 5.git submodule update.
 
-# PS: Pour modifier le foncitonnement du submodule ED3D (la galaxie), voir dans le fichier: /public/assets/js/ed3dmap.min.js.
+# PS: Pour modifier le fonctionnement du submodule ED3D (la galaxie), voir dans le fichier: /public/assets/js/ed3dmap.min.js.
