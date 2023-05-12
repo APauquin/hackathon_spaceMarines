@@ -33,7 +33,7 @@ class FlyController extends AbstractController
             }
 
             if (empty($fly['depart'])) {
-                $errors[] = 'La date de départ est obligatoire';
+                $errors[] = 'La date de départ est obligatoire !';
             }
             if (empty($fly['retour'])) {
                 $errors[] = 'Vous avez que 60% de chances de mourir, donc prévoyez le retour ! ';
