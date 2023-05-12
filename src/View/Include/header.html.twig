@@ -2,8 +2,7 @@
 	<h1>
 		SPACEHUB
 	</h1>
-	<div
-		class="search-form">
+	<div class="search-form">
 
         <div class="container-star">
             <div class="top"></div>
@@ -18,19 +17,25 @@
         </div>
 
 		<!-- Formulaire de recherche -->
+                <form method="post">
 
-		<form method="post">
-			<div class="form-group">
-				<label for="provenance">Planête de départ</label>
-				<input type="text" name="provenance" id="provenance" placeholder="Terre, Lune, ...">
+                    <ul class="errors">
+							{% for error in errors %}
+								<li>{{ error }}</li>
+							{% endfor %}
+						</ul>
 
-				<label for="arrivee">Planête d'arrivée</label>
-				<input type="text" name="arrivee" id="arrivee" placeholder="Mars, Jupiter, ...">
-			</div>
+      <div class="form-group">
+        <label for="provenance">Planète de départ</label>
+        <input type="text" name="provenance" id="provenance" placeholder="Terre, Lune, ...">
 
-			<div class="form-group">
-				<label for="depart">Date de départ</label>
-				<input type="date" name="depart" id="depart" value="13/04/2020">
+        <label for="arrivee">Planête d'arrivée</label>
+        <input type="text" name="arrivee" id="arrivee" placeholder="Mars, Jupiter, ...">
+      </div>
+
+      <div class="form-group">
+        <label for="depart">Date de départ</label>
+        <input type="date" name="depart" id="depart" value="13/04/2020">
 
 				<label for="retour">Date de Retour</label>
 				<input type="date" name="retour" id="retour" value="14/04/2020">

@@ -201,3 +201,10 @@ ul.errors {
     color: yellow;
     font-size: large;
 }
+
+ul.errors {
+    text-align: center;
+    list-style-type: none;
+    color: yellow;
+    font-size: large;
+}
