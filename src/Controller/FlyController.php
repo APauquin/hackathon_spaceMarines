@@ -10,11 +10,12 @@ class FlyController extends AbstractController
     {
         $flyManager = new FlyManager();
         $flights = $flyManager->selectAll();
-        return $this->twig->render('Home/prices.html.twig',
-        [
-            'flights' => $flights,
-        ]
-    );
+        return $this->twig->render(
+            'Home/prices.html.twig',
+            [
+                'flights' => $flights,
+            ]
+        );
     }
 
     public function add()
@@ -41,9 +42,13 @@ class FlyController extends AbstractController
             if (empty($errors)) {
                 $flyManager = new flyManager();
                 $flyManager->insert($fly);
-
-                header('Location: /');
-                return null;
+                $flights = $flyManager->selectAll();
+                return $this->twig->render(
+                    'Home/prices.html.twig',
+                    [
+                        'flights' => $flights,
+                    ]
+                );
             }
         }
         return $this->twig->render('Home/index.html.twig', [

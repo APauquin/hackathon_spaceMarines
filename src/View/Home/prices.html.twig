@@ -1,11 +1,114 @@
 {% extends 'layout.html.twig' %}
 {% block stylesheet %}
 	<link rel="stylesheet" href="/assets/css/home.css">
+	<link rel="stylesheet" href="/assets/css/prices.css">
 {% endblock %}
 
 {% block content %}
 
-
-
+	<table class="fixed_headers">
+		<thead>
+			<tr>
+				<th>Provenance</th>
+				<th>Date de depart</th>
+				<th>Arrivée</th>
+				<th>Date d'arrivée</th>
+				<th>Prix</th>
+				<th></th>
+			</tr>
+		</thead>
+		<tbody>
+			{% for flight in flights %}
+				<tr>
+					<td>{{ flight.provenance }}</td>
+					<td>{{ flight.depart|date_modify('+2 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.arrivee }}</td>
+					<td>{{ flight.retour }}</td>
+					<td>{{ flight.prix  + 45222}}
+						€</td>
+					<td>
+						<button type="button" class="select find-flight">Selectionner</button>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ flight.provenance }}</td>
+					<td>{{ flight.depart }}</td>
+					<td>{{ flight.arrivee }}</td>
+					<td>{{ flight.retour }}</td>
+					<td>{{ flight.prix + flight.prix}}
+						€</td>
+					<td>
+						<button type="button" class="select find-flight">Selectionner</button>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ flight.provenance }}</td>
+					<td>{{ flight.depart|date_modify('+45 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.arrivee }}</td>
+					<td>{{ flight.retour }}</td>
+					<td>{{ flight.prix + flight.prix - (flight.prix / 2)}}
+						€</td>
+					<td>
+						<button type="button" class="select find-flight">Selectionner</button>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ flight.provenance }}</td>
+					<td>{{ flight.depart|date_modify('+24 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.arrivee }}</td>
+					<td>{{ flight.retour }}</td>
+					<td>{{ flight.prix * 2.4 }}
+						€</td>
+					<td>
+						<button type="button" class="select find-flight">Selectionner</button>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ flight.provenance }}</td>
+					<td>{{ flight.depart|date_modify('+4 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.arrivee }}</td>
+					<td>{{ flight.depart|date_modify('+3days')|date('Y-m-d') }}</td>
+					<td>{{ flight.prix + flight.prix * 1.2}}
+						€</td>
+					<td>
+						<button type="button" class="select find-flight">Selectionner</button>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ flight.provenance }}</td>
+					<td>{{ flight.depart }}</td>
+					<td>{{ flight.arrivee }}</td>
+					<td>{{ flight.depart|date_modify('+67 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.prix + flight.prix * 0.9}}
+						€</td>
+					<td>
+						<button type="button" class="select find-flight">Selectionner</button>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ flight.provenance }}</td>
+					<td>{{ flight.depart|date_modify('+20 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.arrivee }}</td>
+					<td>{{ flight.depart|date_modify('+2 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.prix + flight.prix * 1.124}}
+						€</td>
+					<td>
+						<button type="button" class="select find-flight">Selectionner</button>
+					</td>
+				</tr>
+				<tr>
+					<td>{{ flight.provenance }}</td>
+					<td>{{ flight.depart|date_modify('+1 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.arrivee }}</td>
+					<td>{{ flight.depart|date_modify('+31 days')|date('Y-m-d') }}</td>
+					<td>{{ flight.prix + flight.prix * 1.021}}
+						€</td>
+					<td>
+						<button type="button" class="select find-flight">Selectionner</button>
+					</td>
+				</tr>
+			{% endfor %}
+		</tbody>
+	</table>
 
 {% endblock %}
