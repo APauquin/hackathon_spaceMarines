@@ -9,6 +9,7 @@
 return [
     '' => ['HomeController', 'index',],
     '' => ['RoverPhotosController', 'rover',],
+    '' => ['FlyController', 'add',],
     'items' => ['ItemController', 'index',],
     'items/edit' => ['ItemController', 'edit', ['id']],
     'items/show' => ['ItemController', 'show', ['id']],

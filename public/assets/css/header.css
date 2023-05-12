@@ -17,3 +17,10 @@ h1 {
     border-radius: 10px;
     height: fit-content;
 }
+
+ul.errors {
+    text-align: center;
+    list-style-type: none;
+    color: yellow;
+    font-size: large;
+}
